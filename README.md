@@ -13,7 +13,7 @@
 -->
 
 <p align="center">
-  <img src="img/banner.png" alt="“The first patient cured of cancer on a fully AI-automated journey will be a radiotherapy patient.” Henrique Braga. Building the future of autonomous healthcare. Radioterapia.AI, radiation oncology, Rio de Janeiro. FMUSP, HC-FMUSP, automating since 2014." width="100%">
+  <img src="img/banner.png" alt="“The first cancer cure delivered through a fully AI-automated journey will come from radiotherapy.” Henrique Braga. Building the future of autonomous healthcare. Radioterapia.AI, radiation oncology, Rio de Janeiro. FMUSP, HC-FMUSP, automating since 2014." width="100%">
 </p>
 
 I'm **Henrique Faria Braga**, a radiation oncologist in Rio de Janeiro. Since
@@ -132,7 +132,7 @@ and [Fábrica de Slides](https://huggingface.co/spaces/Radioterapia-AI/Fabrica_d
 
 <br>
 
-> *“O primeiro paciente curado de câncer numa jornada totalmente automatizada por IA será um paciente de radioterapia.”*
+> *“A primeira cura de câncer numa jornada totalmente automatizada por IA virá da radioterapia.”*
 
 Sou **Henrique Faria Braga**, radioterapeuta no Rio de Janeiro. Desde 2014
 construo automação para o trabalho operacional e gerencial da radioterapia:
