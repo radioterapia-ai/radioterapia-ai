@@ -1,34 +1,52 @@
 PROCEDENCIA DAS FONTES
 ======================
 
-Tres fontes, usadas SO para gerar as imagens do README do perfil (img/*.png).
-Nada as carrega fora do gerador: o README em si e texto do GitHub.
+Quatro arquivos de fonte, usados SO para gerar as imagens do README do perfil
+(img/*.png). Nada os carrega fora do gerador: o README em si e texto do GitHub.
 
   arquivo                     projeto de origem                                   licenca
   Outfit-Regular.ttf          The Outfit Project Authors                          SIL OFL 1.1
   Outfit-Bold.ttf             https://github.com/Outfitio/Outfit-Fonts            (Outfit-OFL.txt)
   JetBrainsMono-Regular.ttf   The JetBrains Mono Project Authors                  SIL OFL 1.1
                               https://github.com/JetBrains/JetBrainsMono          (JetBrainsMono-OFL.txt)
+  Lora-Italic.woff2           The Lora Project Authors                            SIL OFL 1.1
+                              https://github.com/cyrealtype/Lora-Cyrillic         (Lora-OFL.txt)
 
-De onde vieram os arquivos: copiados byte a byte da pasta de fontes da skill
-de marketing do ecossistema (radioterapia-marketing, assets/fontes), que e a
+OUTFIT E JETBRAINS MONO: copiadas byte a byte da pasta de fontes da skill de
+marketing do ecossistema (radioterapia-marketing, assets/fontes), que e a
 fonte unica da identidade visual (sistema Nocturne) -- as mesmas que a Local
 Suite usa em docs/img/fonte/fontes. Os textos de licenca sao os que
 acompanham as fontes la, renomeados de *-LICENCA-OFL.txt para *-OFL.txt.
 
-SHA-256, conferido na copia (02/10/2026), identico ao da skill e ao da Local
-Suite:
+LORA ITALIC: a face de CITACAO, usada so na frase do banner (02/10/2026). Nao
+esta na skill de marketing; veio do pacote npm @fontsource/lora 5.3.0, a
+distribuicao da Fontsource, arquivo files/lora-latin-400-italic.woff2
+(subconjunto latino, peso 400, italico), renomeado para Lora-Italic.woff2. O
+texto de licenca e o LICENSE do mesmo pacote, renomeado para Lora-OFL.txt.
+Foi escolhida contra Playfair Display, EB Garamond e Newsreader, renderizadas
+no proprio banner: a Playfair liga o «Th» e enfeita o «p», e a EB Garamond fica
+fina demais quando o GitHub reduz a imagem.
+
+SHA-256, conferido na copia (02/10/2026). Os tres primeiros sao identicos aos
+da skill e da Local Suite; o da Lora, ao do arquivo no pacote npm:
 
   Outfit-Regular.ttf         f24945365147c9e783e91d8649959b59be6b00c9ee4ecd2f6b33afbb2dd871fe
   Outfit-Bold.ttf            6654b93d21301ec61887d3cedd6c11d9df1b1dfb63f9cf45ac7995f6e2235ab1
   JetBrainsMono-Regular.ttf  b6b1ff4ddefe36d7f2a6174e1d001cab374e594519ee9049af028d577b64c5f5
+  Lora-Italic.woff2          723cc14fe86bc9fadb2f5f34efb421d246edb240a18d2a7828d2edc041d79996
 
 O QUE A OFL PERMITE, E O QUE ELA PEDE. A SIL Open Font License 1.1 permite
 usar, copiar e redistribuir as fontes junto com outro software, inclusive em
 repositorio publico, desde que a licenca va junto -- e e por isso que o texto
-de cada uma esta nesta pasta. Nenhuma das duas declara Reserved Font Name no
-cabecalho, e as fontes nao foram modificadas. A OFL nao alcanca as imagens
-geradas com elas: um PNG desenhado com a fonte nao e a fonte.
+de cada uma esta nesta pasta. A OFL nao alcanca as imagens geradas com elas:
+um PNG desenhado com a fonte nao e a fonte.
 
-O hash prova IDENTIDADE com a copia da skill, e nao AUTENTICIDADE com o que
-os projetos de origem publicam.
+O NOME RESERVADO DA LORA. Outfit e JetBrains Mono nao declaram Reserved Font
+Name no cabecalho; a Lora declara («Lora»). Isso nao impede redistribuir o
+arquivo como esta -- e e assim que ele vai aqui, exatamente como a Fontsource
+o distribui, sem modificacao nossa. Impede, sim, que uma versao MODIFICADA dele
+seja distribuida com o nome Lora: quem quiser alterar o arquivo tem de
+renomear a fonte.
+
+O hash prova IDENTIDADE com a copia de onde veio (a skill, ou o pacote npm), e
+nao AUTENTICIDADE com o que os projetos de origem publicam.

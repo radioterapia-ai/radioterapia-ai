@@ -36,7 +36,7 @@ I am putting mine up first to give it a **jump start**. Join the builders.
 ## What I build
 
 <p align="center">
-  <img src="img/ecossistema.png" alt="The ecosystem in four layers. Web, AI-first at radioterapia.ai, in any browser: skills, agents, tools, and the webapps ScoreHub RT, DoseMaster AI-Quiz, DeFace RT and MiyAgi Diagram Master. Local, on the clinic's own workstation, where the data stays in the clinic: the Local Suite with ContourLab, 3D Printed Bolus, 3D Reconstructions, Nidus RT, DicomBridge and Elastic RT, and, standalone, Scan-to-Text, Workstation Kit, Portal Prescrição Eletrônica and Portal Ficha Técnica. Android, tablets inside the room, with OCR on the device: PhotoID RT. Hugging Face, where the engines live, open source: engines and dependencies called through the Hugging Face API, and the spaces POP de Elite and Fábrica de Slides. The layer is chosen by what the data is, not by what is convenient." width="100%">
+  <img src="img/ecossistema.png" alt="The ecosystem in four layers. Web, AI-first at radioterapia.ai, in any browser: skills, agents, tools, and the webapps ScoreHub RT, DoseMaster AI-Quiz, DeFace RT and MiyAgi Diagram Master. Local, on the clinic's own workstation, where the data stays in the clinic: the Local Suite with ContourLab, 3D Printed Bolus, 3D Reconstructions, Nidus RT, DicomBridge and Elastic RT, and, standalone, Scan-to-Text, Workstation Kit, Portal Prescrição Eletrônica and Portal Ficha Técnica. Android, tablets inside the room, with OCR on the device: PhotoID RT. Hugging Face, where the engines live, open source: engines and dependencies called through the Hugging Face API, and the spaces POP de Elite and Fábrica de Slides. Browser, workstation or tablet: automate your workflow wherever it happens." width="100%">
 </p>
 
 ### Web · AI-first, at [radioterapia.ai](https://radioterapia.ai)
@@ -132,8 +132,7 @@ and [Fábrica de Slides](https://huggingface.co/spaces/Radioterapia-AI/Fabrica_d
 
 <br>
 
-> “O primeiro paciente curado de câncer numa jornada totalmente automatizada por
-> IA será um paciente de radioterapia.”
+> *“O primeiro paciente curado de câncer numa jornada totalmente automatizada por IA será um paciente de radioterapia.”*
 
 Sou **Henrique Faria Braga**, radioterapeuta no Rio de Janeiro. Desde 2014
 construo automação para o trabalho operacional e gerencial da radioterapia:

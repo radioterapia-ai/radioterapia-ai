@@ -25,8 +25,8 @@ cima de «Sheet»).
 ═══ O QUE ELE RECUSA, EM VEZ DE FOTOGRAFAR ═══
 
   * FONTE QUE NÃO CARREGOU. Sem a Outfit, o Chromium desenha com a fonte do
-    sistema e a peça sai «quase certa» — que é a forma que engana. As três
-    faces precisam estar `loaded`.
+    sistema e a peça sai «quase certa» — que é a forma que engana. Todas as
+    faces de FACES precisam estar `loaded`.
   * TEXTO QUE SAI DO LUGAR: bloco fora da peça, bloco que se sobrepõe a outro
     bloco (`data-bloco`), texto mais largo ou mais alto que a própria coluna
     (`.col`), e dois textos da mesma coluna que se sobrepõem.
@@ -62,8 +62,11 @@ PECAS = (
     ("valores", 1280, 440),
 )
 
-# As três faces que toda peça usa. O nome é o `font-family` do nocturne.css.
-FACES = (("Outfit", "400"), ("Outfit", "700"), ("JetBrains Mono", "400"))
+# As faces do nocturne.css, pelo `font-family`. A Lora (itálica) é a face de
+# citação do banner; as outras peças não a usam, mas ela é declarada na folha
+# comum e carrega em todas — e sem ela a frase sairia na serifada do sistema.
+FACES = (("Outfit", "400"), ("Outfit", "700"), ("JetBrains Mono", "400"),
+         ("Lora", "400"))
 
 
 def _chromiums():
@@ -109,7 +112,7 @@ def _abrir(p):
     raise primeiro
 
 
-# Carrega as três faces e diz o estado de cada uma. `document.fonts.ready` só
+# Carrega as faces e diz o estado de cada uma. `document.fonts.ready` só
 # espera as faces que a página já pediu; `load()` pede todas, e o estado que
 # volta é o que vale.
 _JS_FONTES = u"""

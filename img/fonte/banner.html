@@ -7,7 +7,8 @@
   A FRASE DE CIMA É DELE, e o nome logo abaixo é a assinatura: epígrafe e
   autor, na ordem em que se lê uma citação. A aspa de abertura fica PENDURADA
   na margem (text-indent negativo), para que a primeira letra, e não a aspa,
-  alinhe com o rótulo do topo e com o nome.
+  alinhe com o rótulo do topo e com o nome. Ela vem em Lora Italic, a face de
+  citação, sem negrito e menor que o subtítulo: se lê como epígrafe.
 
   O GRADIENTE APARECE DUAS VEZES E SÓ DUAS: o fim da frase (o peso vai na
   segunda metade, que é a assinatura de escrita dele) e o handle do rodapé. Por
@@ -35,12 +36,19 @@
     font-size: 18px; line-height: 1; letter-spacing: 4.3px;
   }
 
+  /* Lora Italic, a face de citação (nocturne.css), em 26 px: menor que a
+     Outfit de 30 px de antes, para a frase ler como epígrafe do nome, e não
+     como um segundo título. */
   .citacao {
-    position: absolute; left: var(--margem); top: 146px;
-    font-weight: 400; font-size: 30px; line-height: 40px;
+    position: absolute; left: var(--margem); top: 150px;
+    font-family: "Lora", serif; font-style: italic;
+    font-weight: 400; font-size: 26px; line-height: 36px;
     color: var(--ink); white-space: nowrap;
     text-indent: -12px;              /* a aspa pendurada na margem */
   }
+  /* o itálico avança sobre a direita da caixa, e o gradiente recortado no
+     texto cortaria o fim da aspa sem este respiro */
+  .citacao .grad { padding-right: 6px; }
 
   .logo {
     position: absolute; left: 73px; top: 268px;
