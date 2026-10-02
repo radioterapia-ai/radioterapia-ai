@@ -1,0 +1,143 @@
+<!doctype html>
+<!--
+  O ecossistema em quatro camadas, numa régua só — a gramática da grade de
+  módulos da Local Suite (modulos.html): um traço por coluna sobre o fio de
+  1 px, o nome em Outfit-Bold, o corpo em tom secundário, e a FRONTEIRA da
+  camada em mono no pé da coluna.
+
+  A FONTE DE CADA TEXTO É O README DE CADA PROJETO, e não um resumo inventado:
+  a tabela das camadas vem da seção «The ecosystem» do Workstation Kit, e a
+  frase de cada projeto, da primeira linha do README dele.
+
+  A FRONTEIRA DE CADA CAMADA É DIFERENTE porque o que a camada promete é
+  diferente: a web nunca vê dado de paciente; o local existe porque o dado não
+  pode sair; o móvel não tem servidor nosso; o Hugging Face existe para que
+  ninguém instale nada.
+
+  O GRADIENTE VAI SÓ NA FRASE DE BAIXO, e só na metade que carrega o peso: é a
+  regra que organiza o ecossistema inteiro, e é a frase que se lê primeiro.
+
+  Gerado por gerar.py. Não edite o PNG à mão: edite isto e rode o gerador.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ecossistema</title>
+<link rel="stylesheet" href="nocturne.css">
+<style>
+  html, body { width: 1280px; height: 640px; }
+
+  .orbita.um { width: 980px; height: 980px; left: 720px; top: -600px; }
+
+  .kicker {
+    position: absolute; left: var(--margem); top: 60px;
+    font-size: 19px; line-height: 1; letter-spacing: 3.6px;
+  }
+
+  .regua.r1 { top: 128px; }
+  .fio.hair.meio { top: 518px; }
+
+  /* Quatro colunas de 281 px: (1280 − 2 × 78) / 4. O texto ocupa 262 e o
+     resto é o respiro até o traço seguinte. A coluna começa NA régua, e o
+     traço sobe 15 px acima dela. */
+  .col { position: absolute; top: 128px; width: 262px; height: 380px; }
+  .col .traco { left: 0; top: -15px; }
+
+  .nome {
+    position: absolute; left: 0; top: 20px; width: 262px;
+    font-weight: 700; font-size: 30px; line-height: 34px;
+    color: var(--ink); white-space: nowrap;
+  }
+  .onde {
+    position: absolute; left: 0; top: 64px; width: 262px;
+    font-weight: 400; font-size: 18px; line-height: 23px;
+    color: var(--ink-soft);
+  }
+  .projetos {
+    position: absolute; left: 0; top: 128px; width: 262px;
+    list-style: none;
+  }
+  .projetos li + li { margin-top: 16px; }
+  .p-nome {
+    display: block;
+    font-weight: 700; font-size: 20px; line-height: 24px;
+    color: var(--ink);
+  }
+  .p-desc {
+    display: block; margin-top: 3px;
+    font-weight: 400; font-size: 17px; line-height: 22px;
+    color: var(--ink-soft);
+  }
+  /* 14 px, e não 12,5: na coluna do GitHub a peça cai para ~69% e o rótulo
+     de 12,5 px vira 8,6 px. */
+  .fronteira {
+    position: absolute; left: 0; top: 352px;
+    font-size: 14px; line-height: 1; letter-spacing: 3px;
+    color: var(--ink-soft);
+  }
+
+  .regra {
+    position: absolute; left: var(--margem); top: 552px;
+    font-weight: 400; font-size: 26px; line-height: 1;
+    color: var(--ink); white-space: nowrap;
+  }
+  /* sem o respiro de 2 px do .grad do banner: aqui o que vem depois é a
+     vírgula, e o respiro a descolava da palavra */
+</style>
+</head>
+<body>
+  <div class="fundo"></div>
+  <div class="orbita um"></div>
+
+  <div class="kicker mono" data-bloco="kicker">The ecosystem, in four layers</div>
+
+  <div class="regua r1"></div>
+
+  <div class="col" style="left: 78px" data-bloco="web">
+    <div class="traco"></div>
+    <h2 class="nome">Web</h2>
+    <p class="onde">In the browser, at radioterapia.ai</p>
+    <ul class="projetos">
+      <li><span class="p-nome">radioterapia.ai</span><span class="p-desc">AI-first hub for medical skills. Expert Mode, and Patient Information in 12 languages.</span></li>
+      <li><span class="p-nome">ScoreHub RT</span><span class="p-desc">Published clinical scores and safety references, for the consultation.</span></li>
+    </ul>
+    <div class="fronteira mono">No patient data</div>
+  </div>
+
+  <div class="col" style="left: 359px" data-bloco="local">
+    <div class="traco"></div>
+    <h2 class="nome">Local</h2>
+    <p class="onde">On the clinic&rsquo;s own Windows workstation</p>
+    <ul class="projetos">
+      <li><span class="p-nome">Local Suite</span><span class="p-desc">A study bench for AI segmentation. RTSTRUCT beside the series, unapproved.</span></li>
+      <li><span class="p-nome">Workstation Kit</span><span class="p-desc">Diagnoses, cleans and optimises the session. No administrator.</span></li>
+    </ul>
+    <div class="fronteira mono">Data never leaves</div>
+  </div>
+
+  <div class="col" style="left: 640px" data-bloco="mobile">
+    <div class="traco"></div>
+    <h2 class="nome">Mobile</h2>
+    <p class="onde">Android tablets, inside the room</p>
+    <ul class="projetos">
+      <li><span class="p-nome">PhotoID RT</span><span class="p-desc">Positioning photos and the <span style="white-space: nowrap">Time-Out</span> sheet. Label reading on the device.</span></li>
+    </ul>
+    <div class="fronteira mono">No server of ours</div>
+  </div>
+
+  <div class="col" style="left: 921px" data-bloco="hf">
+    <div class="traco"></div>
+    <h2 class="nome">Hugging Face</h2>
+    <p class="onde">Heavy dependencies, straight from the browser</p>
+    <ul class="projetos">
+      <li><span class="p-nome">POP de Elite</span><span class="p-desc">Standard operating procedures as Word documents, in the service&rsquo;s own colours.</span></li>
+      <li><span class="p-nome">F&aacute;brica de Slides</span><span class="p-desc">Medical lectures assembled inside the event&rsquo;s own template.</span></li>
+    </ul>
+    <div class="fronteira mono">Nothing to install</div>
+  </div>
+
+  <div class="fio hair meio"></div>
+
+  <p class="regra" data-bloco="regra">The layer is chosen <span class="grad">by what the data is</span>, not by what is convenient.</p>
+</body>
+</html>

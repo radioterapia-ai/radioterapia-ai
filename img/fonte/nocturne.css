@@ -1,0 +1,117 @@
+/*
+ * O sistema Nocturne, na versão das peças do README do perfil.
+ *
+ * A fonte única da identidade é `references/identidade-visual.md` da skill de
+ * marketing do ecossistema (radioterapia-marketing). Os valores abaixo são o
+ * espelho dela que o PhotoID RT, o Workstation Kit e a Local Suite já usam nas
+ * imagens dos seus README: margem de 78 px, fio de 1 px em #303E5E, rótulos em
+ * JetBrains Mono caixa alta com tracking largo, título em Outfit-Bold branco
+ * puro. Esta cópia é a mesma da Local Suite (docs/img/fonte/nocturne.css).
+ *
+ * O GRADIENTE É O DO LOGOTIPO (#42A5F5 → #7B6FE0 → #B254E8), e não o
+ * #0A2A6B → #24D3EE que a identidade declara para o perfil @radioterapia.ai.
+ * É a escolha das portas de repositório do ecossistema: o logotipo
+ * renderizado é azul → roxo, e o perfil tem de parecer da mesma família que
+ * os repositórios que ele apresenta.
+ *
+ * Onde o gradiente aparece: UMA frase por peça e o handle do rodapé. Em
+ * nenhum outro lugar — é o que faz a frase que o recebe ser lida primeiro.
+ */
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fontes/Outfit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("fontes/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fontes/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --fundo: #00030E;
+  --ink: #FFFFFF;
+  --ink-soft: #9AA8C6;
+  --apagado: #5F6C8A;
+  --fio: #303E5E;          /* fio divisor da peça: régua de instrumento */
+  --hair: #222E4A;         /* fio de estrutura */
+  --grad: linear-gradient(90deg, #42A5F5 0%, #7B6FE0 50%, #B254E8 100%);
+  --margem: 78px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  overflow: hidden;
+  background: var(--fundo);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  position: relative;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ─── o fundo: azul profundo, dois halos e uma órbita ──────────────────────
+ * Os halos ficam à direita e não passam da metade da peça: com força cheia
+ * eles lavam a metade direita e se leem como fundo em gradiente, não como
+ * halo. «A precisão não grita.» */
+.fundo {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 33% 88% at 85% 26%, rgba(8, 34, 88, .64) 0%, rgba(8, 34, 88, .44) 42%, rgba(8, 34, 88, 0) 100%),
+    radial-gradient(ellipse 33% 48% at 97% 88%, rgba(10, 62, 92, .44) 0%, rgba(10, 62, 92, 0) 100%),
+    radial-gradient(ellipse 42% 36% at 26% 110%, rgba(8, 34, 88, .22) 0%, rgba(8, 34, 88, 0) 100%);
+}
+.orbita {
+  position: absolute; pointer-events: none;
+  border-radius: 50%;
+  border: 1px solid rgba(120, 150, 230, .055);
+}
+.orbita.dois { border-color: rgba(120, 150, 230, .035); }
+
+/* ─── tipografia ─────────────────────────────────────────────────────────── */
+.mono {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.sep { display: inline-block; margin: 0 29.5px; }
+
+.grad {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fio {
+  position: absolute; left: var(--margem); right: var(--margem);
+  height: 1px; background: var(--fio);
+}
+.fio.hair { background: var(--hair); }
+
+/* ─── a régua dos diagramas: um traço por coluna ─────────────────────────── */
+.regua {
+  position: absolute; left: var(--margem); right: var(--margem);
+  height: 1px; background: var(--fio);
+}
+.traco {
+  position: absolute; width: 4px; height: 17px; background: var(--ink);
+}
+.traco.vazado {
+  background: transparent; border: 1px solid var(--apagado);
+}

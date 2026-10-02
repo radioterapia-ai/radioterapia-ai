@@ -1,0 +1,34 @@
+PROCEDENCIA DAS FONTES
+======================
+
+Tres fontes, usadas SO para gerar as imagens do README do perfil (img/*.png).
+Nada as carrega fora do gerador: o README em si e texto do GitHub.
+
+  arquivo                     projeto de origem                                   licenca
+  Outfit-Regular.ttf          The Outfit Project Authors                          SIL OFL 1.1
+  Outfit-Bold.ttf             https://github.com/Outfitio/Outfit-Fonts            (Outfit-OFL.txt)
+  JetBrainsMono-Regular.ttf   The JetBrains Mono Project Authors                  SIL OFL 1.1
+                              https://github.com/JetBrains/JetBrainsMono          (JetBrainsMono-OFL.txt)
+
+De onde vieram os arquivos: copiados byte a byte da pasta de fontes da skill
+de marketing do ecossistema (radioterapia-marketing, assets/fontes), que e a
+fonte unica da identidade visual (sistema Nocturne) -- as mesmas que a Local
+Suite usa em docs/img/fonte/fontes. Os textos de licenca sao os que
+acompanham as fontes la, renomeados de *-LICENCA-OFL.txt para *-OFL.txt.
+
+SHA-256, conferido na copia (02/10/2026), identico ao da skill e ao da Local
+Suite:
+
+  Outfit-Regular.ttf         f24945365147c9e783e91d8649959b59be6b00c9ee4ecd2f6b33afbb2dd871fe
+  Outfit-Bold.ttf            6654b93d21301ec61887d3cedd6c11d9df1b1dfb63f9cf45ac7995f6e2235ab1
+  JetBrainsMono-Regular.ttf  b6b1ff4ddefe36d7f2a6174e1d001cab374e594519ee9049af028d577b64c5f5
+
+O QUE A OFL PERMITE, E O QUE ELA PEDE. A SIL Open Font License 1.1 permite
+usar, copiar e redistribuir as fontes junto com outro software, inclusive em
+repositorio publico, desde que a licenca va junto -- e e por isso que o texto
+de cada uma esta nesta pasta. Nenhuma das duas declara Reserved Font Name no
+cabecalho, e as fontes nao foram modificadas. A OFL nao alcanca as imagens
+geradas com elas: um PNG desenhado com a fonte nao e a fonte.
+
+O hash prova IDENTIDADE com a copia da skill, e nao AUTENTICIDADE com o que
+os projetos de origem publicam.

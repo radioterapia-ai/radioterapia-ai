@@ -1,0 +1,109 @@
+<!doctype html>
+<!--
+  Os seis valores, como régua de instrumento — a mesma forma do fluxo do
+  PhotoID RT e da Local Suite: um traço por passo, numerado, e a régua de 1 px
+  em #303E5E ligando os seis.
+
+  A FONTE É A SEÇÃO «Valores» de references/marca.md, na skill de marketing do
+  ecossistema, na ordem em que estão lá: medir antes de afirmar; rascunho é
+  rascunho; não circula conteúdo protegido nem dado pessoal; mostrar o erro;
+  ensinar em vez de entregar; utilidade antes de audiência.
+
+  Cada título é um verbo no imperativo e o corpo o continua em minúscula
+  («Measure / before claiming.»): seis frases de uma forma só, e não seis
+  rótulos com seis explicações de formas diferentes.
+
+  Os seis são desenhados IGUAIS. No fluxo da Local Suite o sexto passo é
+  vazado porque é o que o programa não faz (a revisão é ato médico); aqui não
+  há passo que fique de fora — os seis valem para tudo.
+
+  Sem gradiente: é um diagrama, como o fluxo — a identidade diz «no máximo uma
+  frase por peça», não «pelo menos uma».
+
+  Gerado por gerar.py. Não edite o PNG à mão: edite isto e rode o gerador.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>valores</title>
+<link rel="stylesheet" href="nocturne.css">
+<style>
+  html, body { width: 1280px; height: 440px; }
+
+  .orbita.um { width: 900px; height: 900px; left: 640px; top: -560px; }
+
+  .kicker {
+    position: absolute; left: var(--margem); top: 60px;
+    font-size: 19px; line-height: 1; letter-spacing: 3.6px;
+  }
+
+  .regua { top: 168px; }
+  .fio.hair.base { top: 396px; }
+
+  /* Seis colunas de 187,5 px: (1280 − 2 × 78) / 6. O texto ocupa 172 e o
+     resto é o respiro até o traço seguinte. A coluna começa abaixo do rótulo
+     do topo: se começasse em 0, a caixa dela cruzaria o rótulo, e o gerador
+     recusa (é a coluna, e não o texto, que leva o data-bloco). */
+  .col { position: absolute; top: 110px; width: 172px; height: 280px; }
+
+  /* posições dentro da coluna, que começa em y = 110: o número em 120, o
+     traço em 153, o título em 193 e o corpo em 246 da peça */
+  .num {
+    position: absolute; left: 0; top: 10px;
+    font-size: 18px; line-height: 1; letter-spacing: 3.6px;
+  }
+  .col .traco { left: 0; top: 43px; }
+  .passo {
+    position: absolute; left: 0; top: 83px; width: 172px;
+    font-weight: 700; font-size: 30px; line-height: 34px;
+    color: var(--ink);
+  }
+  .corpo {
+    position: absolute; left: 0; top: 136px; width: 172px;
+    font-weight: 400; font-size: 18px; line-height: 24px;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+  <div class="fundo"></div>
+  <div class="orbita um"></div>
+
+  <div class="kicker mono" data-bloco="kicker">How we build, in six rules</div>
+
+  <div class="regua"></div>
+
+  <div class="col" style="left: 78px" data-bloco="v1">
+    <div class="num mono">01</div><div class="traco"></div>
+    <h2 class="passo">Measure</h2>
+    <p class="corpo">before claiming. A verified number beats a comfortable estimate.</p>
+  </div>
+  <div class="col" style="left: 265px" data-bloco="v2">
+    <div class="num mono">02</div><div class="traco"></div>
+    <h2 class="passo">Review</h2>
+    <p class="corpo">every automatic output: it stays a draft until a physician approves it.</p>
+  </div>
+  <div class="col" style="left: 452px" data-bloco="v3">
+    <div class="num mono">03</div><div class="traco"></div>
+    <h2 class="passo">Protect</h2>
+    <p class="corpo">personal data and protected content. Neither circulates, whatever the intent.</p>
+  </div>
+  <div class="col" style="left: 640px" data-bloco="v4">
+    <div class="num mono">04</div><div class="traco"></div>
+    <h2 class="passo">Show</h2>
+    <p class="corpo">the error. A backstage with its failures beats a flawless showcase.</p>
+  </div>
+  <div class="col" style="left: 827px" data-bloco="v5">
+    <div class="num mono">05</div><div class="traco"></div>
+    <h2 class="passo">Teach</h2>
+    <p class="corpo">instead of delivering. Whoever learns comes back as a peer.</p>
+  </div>
+  <div class="col" style="left: 1015px" data-bloco="v6">
+    <div class="num mono">06</div><div class="traco"></div>
+    <h2 class="passo">Serve</h2>
+    <p class="corpo">someone&rsquo;s work before any audience. If it helps no one, it is not published.</p>
+  </div>
+
+  <div class="fio hair base"></div>
+</body>
+</html>

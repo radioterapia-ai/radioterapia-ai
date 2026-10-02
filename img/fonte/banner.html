@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+  O cabeçalho do perfil: 1280 × 640, a mesma medida do banner do PhotoID RT e
+  da Local Suite, e o mesmo esqueleto — rótulo em mono no topo, o nome grande,
+  uma frase, o fio, e o rodapé com o handle.
+
+  AS TRÊS REFERÊNCIAS, NA ORDEM DE SUSTENTAÇÃO (references/marca.md da skill
+  de marketing): a frase diz o construtor, e o rodapé diz a formação que o
+  sustenta. O construtor sem o médico é commodity; por isso o rodapé não sai.
+
+  O GRADIENTE APARECE DUAS VEZES E SÓ DUAS: a segunda metade da frase (o peso
+  vai na segunda metade, que é a assinatura de escrita dele) e o handle do
+  rodapé. O nome fica em branco puro: não há sufixo de família num nome de
+  pessoa, e pôr o sobrenome no gradiente o leria como produto.
+
+  Gerado por gerar.py. Não edite o PNG à mão: edite isto e rode o gerador.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>banner</title>
+<link rel="stylesheet" href="nocturne.css">
+<style>
+  html, body { width: 1280px; height: 640px; }
+
+  .orbita.um   { width: 760px; height: 760px; left: 830px;  top: -60px; }
+  .orbita.dois { width: 1120px; height: 1120px; left: 650px; top: -240px; }
+
+  .topo {
+    position: absolute; left: var(--margem); top: 87px;
+    font-size: 18px; line-height: 1; letter-spacing: 4.3px;
+  }
+
+  .logo {
+    position: absolute; left: 73px; top: 284px;
+    font-weight: 700; font-size: 110px; line-height: 1;
+    letter-spacing: -1.2px; white-space: nowrap;
+  }
+
+  .sub {
+    position: absolute; left: var(--margem); top: 411px;
+    font-weight: 400; font-size: 34px; line-height: 1;
+    color: var(--ink-soft); white-space: nowrap;
+  }
+  .sub .grad { padding-right: 2px; }
+
+  .fio.divisor { top: 508px; }
+
+  .rodape-rot {
+    position: absolute; left: var(--margem); top: 546px;
+    font-size: 21px; line-height: 1; letter-spacing: 4px;
+  }
+  .handle {
+    position: absolute; right: var(--margem); top: 537px;
+    font-weight: 400; font-size: 31px; line-height: 1;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="fundo"></div>
+  <div class="orbita um"></div>
+  <div class="orbita dois"></div>
+
+  <div class="topo mono" data-bloco="topo">RADIOTERAPIA.AI<span class="sep">·</span>RADIATION ONCOLOGY<span class="sep">·</span>RIO DE JANEIRO</div>
+
+  <h1 class="logo" data-bloco="logo">Henrique Braga</h1>
+  <p class="sub" data-bloco="sub">The radiation oncologist <span class="grad">who builds</span></p>
+
+  <div class="fio divisor"></div>
+
+  <div class="rodape-rot mono" data-bloco="rodape">FMUSP<span class="sep">·</span>HC-FMUSP<span class="sep">·</span>10+ YEARS OF AUTOMATION</div>
+  <div class="handle grad" data-bloco="handle">radioterapia.ai</div>
+</body>
+</html>
