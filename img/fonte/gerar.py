@@ -58,7 +58,7 @@ SAIDA = os.path.dirname(AQUI)                       # img/
 # no social preview e o que cabe na coluna do README sem reamostrar demais.
 PECAS = (
     ("banner", 1280, 640),
-    ("ecossistema", 1280, 640),
+    ("ecossistema", 1280, 830),
     ("valores", 1280, 440),
 )
 

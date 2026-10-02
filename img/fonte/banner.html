@@ -4,14 +4,18 @@
   da Local Suite, e o mesmo esqueleto — rótulo em mono no topo, o nome grande,
   uma frase, o fio, e o rodapé com o handle.
 
-  AS TRÊS REFERÊNCIAS, NA ORDEM DE SUSTENTAÇÃO (references/marca.md da skill
-  de marketing): a frase diz o construtor, e o rodapé diz a formação que o
-  sustenta. O construtor sem o médico é commodity; por isso o rodapé não sai.
+  A FRASE DE CIMA É DELE, e o nome logo abaixo é a assinatura: epígrafe e
+  autor, na ordem em que se lê uma citação. A aspa de abertura fica PENDURADA
+  na margem (text-indent negativo), para que a primeira letra, e não a aspa,
+  alinhe com o rótulo do topo e com o nome.
 
-  O GRADIENTE APARECE DUAS VEZES E SÓ DUAS: a segunda metade da frase (o peso
-  vai na segunda metade, que é a assinatura de escrita dele) e o handle do
-  rodapé. O nome fica em branco puro: não há sufixo de família num nome de
-  pessoa, e pôr o sobrenome no gradiente o leria como produto.
+  O GRADIENTE APARECE DUAS VEZES E SÓ DUAS: o fim da frase (o peso vai na
+  segunda metade, que é a assinatura de escrita dele) e o handle do rodapé. Por
+  isso o subtítulo, logo abaixo do nome, fica em tom secundário: duas frases
+  no gradiente disputariam qual se lê primeiro.
+
+  O nome fica em branco puro: não há sufixo de família num nome de pessoa, e
+  pôr o sobrenome no gradiente o leria como produto.
 
   Gerado por gerar.py. Não edite o PNG à mão: edite isto e rode o gerador.
 -->
@@ -31,18 +35,24 @@
     font-size: 18px; line-height: 1; letter-spacing: 4.3px;
   }
 
+  .citacao {
+    position: absolute; left: var(--margem); top: 146px;
+    font-weight: 400; font-size: 30px; line-height: 40px;
+    color: var(--ink); white-space: nowrap;
+    text-indent: -12px;              /* a aspa pendurada na margem */
+  }
+
   .logo {
-    position: absolute; left: 73px; top: 284px;
+    position: absolute; left: 73px; top: 268px;
     font-weight: 700; font-size: 110px; line-height: 1;
     letter-spacing: -1.2px; white-space: nowrap;
   }
 
   .sub {
-    position: absolute; left: var(--margem); top: 411px;
+    position: absolute; left: var(--margem); top: 404px;
     font-weight: 400; font-size: 34px; line-height: 1;
     color: var(--ink-soft); white-space: nowrap;
   }
-  .sub .grad { padding-right: 2px; }
 
   .fio.divisor { top: 508px; }
 
@@ -64,12 +74,14 @@
 
   <div class="topo mono" data-bloco="topo">RADIOTERAPIA.AI<span class="sep">·</span>RADIATION ONCOLOGY<span class="sep">·</span>RIO DE JANEIRO</div>
 
+  <p class="citacao" data-bloco="citacao">&ldquo;The first patient cured of cancer on a fully AI-automated journey<br>will be <span class="grad">a radiotherapy patient.&rdquo;</span></p>
+
   <h1 class="logo" data-bloco="logo">Henrique Braga</h1>
-  <p class="sub" data-bloco="sub">The radiation oncologist <span class="grad">who builds</span></p>
+  <p class="sub" data-bloco="sub">Building the future of autonomous healthcare</p>
 
   <div class="fio divisor"></div>
 
-  <div class="rodape-rot mono" data-bloco="rodape">FMUSP<span class="sep">·</span>HC-FMUSP<span class="sep">·</span>10+ YEARS OF AUTOMATION</div>
+  <div class="rodape-rot mono" data-bloco="rodape">FMUSP<span class="sep">·</span>HC-FMUSP<span class="sep">·</span>AUTOMATING SINCE 2014</div>
   <div class="handle grad" data-bloco="handle">radioterapia.ai</div>
 </body>
 </html>

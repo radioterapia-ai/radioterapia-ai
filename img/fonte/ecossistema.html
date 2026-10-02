@@ -2,17 +2,20 @@
 <!--
   O ecossistema em quatro camadas, numa régua só — a gramática da grade de
   módulos da Local Suite (modulos.html): um traço por coluna sobre o fio de
-  1 px, o nome em Outfit-Bold, o corpo em tom secundário, e a FRONTEIRA da
+  1 px, o nome em Outfit-Bold, o corpo em tom secundário, e a etiqueta da
   camada em mono no pé da coluna.
 
-  A FONTE DE CADA TEXTO É O README DE CADA PROJETO, e não um resumo inventado:
-  a tabela das camadas vem da seção «The ecosystem» do Workstation Kit, e a
-  frase de cada projeto, da primeira linha do README dele.
+  AS COLUNAS TÊM LARGURAS DIFERENTES DE PROPÓSITO: a web e o local carregam
+  quase tudo (skills, agentes, ferramentas, quatro webapps; os seis módulos da
+  Local Suite e os quatro projetos de fora dela), e o Android e o Hugging Face
+  cabem em pouco. Quatro colunas iguais cortariam os nomes longos («Portal
+  Prescrição Eletrônica») para sobrar branco nas duas da direita.
 
-  A FRONTEIRA DE CADA CAMADA É DIFERENTE porque o que a camada promete é
-  diferente: a web nunca vê dado de paciente; o local existe porque o dado não
-  pode sair; o móvel não tem servidor nosso; o Hugging Face existe para que
-  ninguém instale nada.
+  É UM MAPA, NÃO UMA LISTA: a peça dá os nomes agrupados; o que cada um faz
+  está no README, em texto, onde se busca e se corrige. A fonte é a lista que o
+  autor ditou em 02/10/2026.
+
+  As etiquetas do pé dizem o que a camada GARANTE, em positivo.
 
   O GRADIENTE VAI SÓ NA FRASE DE BAIXO, e só na metade que carrega o peso: é a
   regra que organiza o ecossistema inteiro, e é a frase que se lê primeiro.
@@ -25,7 +28,7 @@
 <title>ecossistema</title>
 <link rel="stylesheet" href="nocturne.css">
 <style>
-  html, body { width: 1280px; height: 640px; }
+  html, body { width: 1280px; height: 830px; }
 
   .orbita.um { width: 980px; height: 980px; left: 720px; top: -600px; }
 
@@ -35,49 +38,51 @@
   }
 
   .regua.r1 { top: 128px; }
-  .fio.hair.meio { top: 518px; }
+  .fio.hair.meio { top: 740px; }
 
-  /* Quatro colunas de 281 px: (1280 − 2 × 78) / 4. O texto ocupa 262 e o
-     resto é o respiro até o traço seguinte. A coluna começa NA régua, e o
-     traço sobe 15 px acima dela. */
-  .col { position: absolute; top: 128px; width: 262px; height: 380px; }
+  /* A coluna começa NA régua, e o traço sobe 15 px acima dela. Larguras:
+     300 + 300 + 220 + 229, com 25 px de respiro entre elas = 1124 px, que é
+     1280 − 2 × 78. */
+  .col { position: absolute; top: 128px; height: 590px; }
   .col .traco { left: 0; top: -15px; }
 
   .nome {
-    position: absolute; left: 0; top: 20px; width: 262px;
+    position: absolute; left: 0; top: 20px; right: 0;
     font-weight: 700; font-size: 30px; line-height: 34px;
     color: var(--ink); white-space: nowrap;
   }
   .onde {
-    position: absolute; left: 0; top: 64px; width: 262px;
+    position: absolute; left: 0; top: 62px; right: 0;
     font-weight: 400; font-size: 18px; line-height: 23px;
     color: var(--ink-soft);
   }
-  .projetos {
-    position: absolute; left: 0; top: 128px; width: 262px;
-    list-style: none;
+  .grupos { position: absolute; left: 0; top: 122px; right: 0; }
+  .grupo + .grupo { margin-top: 20px; }
+  .rotulo {
+    display: block; margin-bottom: 7px;
+    font-size: 12.5px; line-height: 1; letter-spacing: 3px;
   }
-  .projetos li + li { margin-top: 16px; }
-  .p-nome {
-    display: block;
-    font-weight: 700; font-size: 20px; line-height: 24px;
-    color: var(--ink);
-  }
-  .p-desc {
-    display: block; margin-top: 3px;
-    font-weight: 400; font-size: 17px; line-height: 22px;
+  .texto {
+    font-weight: 400; font-size: 16px; line-height: 21px;
     color: var(--ink-soft);
   }
-  /* 14 px, e não 12,5: na coluna do GitHub a peça cai para ~69% e o rótulo
-     de 12,5 px vira 8,6 px. */
+  .nomes { list-style: none; }
+  .nomes li {
+    font-weight: 700; font-size: 18px; line-height: 25px;
+    color: var(--ink); white-space: nowrap;
+  }
+  .nomes + .texto { margin-top: 4px; }
+
+  /* a etiqueta mora numa linha só para as quatro colunas, abaixo da mais
+     alta (a web termina em ~677 px da peça, medida no navegador) */
   .fronteira {
-    position: absolute; left: 0; top: 352px;
+    position: absolute; left: 0; top: 572px;
     font-size: 14px; line-height: 1; letter-spacing: 3px;
     color: var(--ink-soft);
   }
 
   .regra {
-    position: absolute; left: var(--margem); top: 552px;
+    position: absolute; left: var(--margem); top: 772px;
     font-weight: 400; font-size: 26px; line-height: 1;
     color: var(--ink); white-space: nowrap;
   }
@@ -93,47 +98,99 @@
 
   <div class="regua r1"></div>
 
-  <div class="col" style="left: 78px" data-bloco="web">
+  <div class="col" style="left: 78px; width: 300px" data-bloco="web">
     <div class="traco"></div>
     <h2 class="nome">Web</h2>
-    <p class="onde">In the browser, at radioterapia.ai</p>
-    <ul class="projetos">
-      <li><span class="p-nome">radioterapia.ai</span><span class="p-desc">AI-first hub for medical skills. Expert Mode, and Patient Information in 12 languages.</span></li>
-      <li><span class="p-nome">ScoreHub RT</span><span class="p-desc">Published clinical scores and safety references, for the consultation.</span></li>
-    </ul>
-    <div class="fronteira mono">No patient data</div>
+    <p class="onde">AI-first, at radioterapia.ai</p>
+    <div class="grupos">
+      <div class="grupo">
+        <span class="rotulo mono">Skills</span>
+        <p class="texto">Medical records, consent forms, insurance justifications, patient interactions, and slides with a human touch.</p>
+      </div>
+      <div class="grupo">
+        <span class="rotulo mono">Agents</span>
+        <p class="texto">Peer review and tumor boards, simulated. Pricing with radiotherapy market benchmarks.</p>
+      </div>
+      <div class="grupo">
+        <span class="rotulo mono">Tools</span>
+        <p class="texto">Dose-constraint selection, consultation transcription, realistic images from curated prompts.</p>
+      </div>
+      <div class="grupo">
+        <span class="rotulo mono">Webapps</span>
+        <ul class="nomes">
+          <li>ScoreHub RT</li>
+          <li>DoseMaster AI-Quiz</li>
+          <li>DeFace RT</li>
+          <li>MiyAgi Diagram Master</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fronteira mono">In any browser</div>
   </div>
 
-  <div class="col" style="left: 359px" data-bloco="local">
+  <div class="col" style="left: 403px; width: 300px" data-bloco="local">
     <div class="traco"></div>
     <h2 class="nome">Local</h2>
-    <p class="onde">On the clinic&rsquo;s own Windows workstation</p>
-    <ul class="projetos">
-      <li><span class="p-nome">Local Suite</span><span class="p-desc">A study bench for AI segmentation. RTSTRUCT beside the series, unapproved.</span></li>
-      <li><span class="p-nome">Workstation Kit</span><span class="p-desc">Diagnoses, cleans and optimises the session. No administrator.</span></li>
-    </ul>
-    <div class="fronteira mono">Data never leaves</div>
+    <p class="onde">On the clinic&rsquo;s own workstation</p>
+    <div class="grupos">
+      <div class="grupo">
+        <span class="rotulo mono">Local Suite</span>
+        <ul class="nomes">
+          <li>ContourLab</li>
+          <li>3D Printed Bolus</li>
+          <li>3D Reconstructions</li>
+          <li>Nidus RT</li>
+          <li>DicomBridge</li>
+          <li>Elastic RT</li>
+        </ul>
+      </div>
+      <div class="grupo">
+        <span class="rotulo mono">Standalone</span>
+        <ul class="nomes">
+          <li>Scan-to-Text</li>
+          <li>Workstation Kit</li>
+          <li>Portal Prescri&ccedil;&atilde;o Eletr&ocirc;nica</li>
+          <li>Portal Ficha T&eacute;cnica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fronteira mono">Data stays in the clinic</div>
   </div>
 
-  <div class="col" style="left: 640px" data-bloco="mobile">
+  <div class="col" style="left: 728px; width: 220px" data-bloco="android">
     <div class="traco"></div>
-    <h2 class="nome">Mobile</h2>
-    <p class="onde">Android tablets, inside the room</p>
-    <ul class="projetos">
-      <li><span class="p-nome">PhotoID RT</span><span class="p-desc">Positioning photos and the <span style="white-space: nowrap">Time-Out</span> sheet. Label reading on the device.</span></li>
-    </ul>
-    <div class="fronteira mono">No server of ours</div>
+    <h2 class="nome">Android</h2>
+    <p class="onde">Tablets inside the room</p>
+    <div class="grupos">
+      <div class="grupo">
+        <span class="rotulo mono">App</span>
+        <ul class="nomes">
+          <li>PhotoID RT</li>
+        </ul>
+        <p class="texto">Positioning photos and the <span style="white-space: nowrap">Time-Out</span> sheet.</p>
+      </div>
+    </div>
+    <div class="fronteira mono">OCR on the device</div>
   </div>
 
-  <div class="col" style="left: 921px" data-bloco="hf">
+  <div class="col" style="left: 973px; width: 229px" data-bloco="hf">
     <div class="traco"></div>
     <h2 class="nome">Hugging Face</h2>
-    <p class="onde">Heavy dependencies, straight from the browser</p>
-    <ul class="projetos">
-      <li><span class="p-nome">POP de Elite</span><span class="p-desc">Standard operating procedures as Word documents, in the service&rsquo;s own colours.</span></li>
-      <li><span class="p-nome">F&aacute;brica de Slides</span><span class="p-desc">Medical lectures assembled inside the event&rsquo;s own template.</span></li>
-    </ul>
-    <div class="fronteira mono">Nothing to install</div>
+    <p class="onde">Where the engines live</p>
+    <div class="grupos">
+      <div class="grupo">
+        <span class="rotulo mono">By API</span>
+        <p class="texto">Our engines and their dependencies, called through the Hugging Face API.</p>
+      </div>
+      <div class="grupo">
+        <span class="rotulo mono">Spaces</span>
+        <ul class="nomes">
+          <li>POP de Elite</li>
+          <li>F&aacute;brica de Slides</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fronteira mono">Open source</div>
   </div>
 
   <div class="fio hair meio"></div>
